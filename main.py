@@ -1,31 +1,13 @@
 __author__='edinkelspiel'
 
-class Team:
+from markdown import *
 
-    def __init__(self, roster, record, location):
-        self.roster = roster
-        self.record = record
-        self.location = location
+output_string = ""
 
-    def is_home(self, location):
-        return game_location == location
+output_string += h2("AWAY TEAM vs. HOME TEAM")
 
-    def get_starters(self, roster):
-        starter_list = []
-        for player in roster:
-            if player.starter == True:
-                starter_list.append(player)
+output_string += u"Blah blah blah\n\n"
 
+output_string += h3(bold("FINALS: GAME 1"))
 
-
-class Player:
-    def __init__(self, team, stats, starter=False, position=None):
-        self.team = team
-        self.stats = stats
-        self.starter = starter
-        self.position = position
-
-    def set_as_starter(self, position_input):
-        position = position_input
-        starter = True
-
+print output_string
